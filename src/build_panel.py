@@ -17,6 +17,7 @@ import pandas as pd
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 RAW, OUT = ROOT / "data" / "raw", ROOT / "data" / "processed"
+OUT.mkdir(parents=True, exist_ok=True)        # not tracked in git, so absent on a fresh clone
 PERIODS = ["2023H2", "2024H1", "2024H2", "2025H1", "2025H2", "2026H1"]
 PERIOD_START = {p: pd.Timestamp("{}-{}-01".format(p[:4], "01" if p.endswith("H1") else "07"))
                 for p in PERIODS + ["2023H1"]}

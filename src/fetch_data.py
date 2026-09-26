@@ -6,6 +6,9 @@ import hashlib
 import pathlib
 import urllib.request
 
+# Some file hosts reject Python's default user agent (HTTP 403).
+HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; portfolio-analysis-fetch/1.0)"}
+
 RAW = pathlib.Path(__file__).resolve().parents[1] / "data" / "raw"
 BASE = "https://assets.ctfassets.net/4cd45et68cgf/"
 FILES = {
@@ -29,7 +32,8 @@ RAW.mkdir(parents=True, exist_ok=True)
 for period, (path, expected) in FILES.items():
     dest = RAW / "netflix_engagement_{}.xlsx".format(period)
     if not dest.exists():
-        urllib.request.urlretrieve(BASE + path, dest)
+        with urllib.request.urlopen(urllib.request.Request(BASE + path, headers=HEADERS), timeout=120) as r:
+            dest.write_bytes(r.read())
     actual = hashlib.sha256(dest.read_bytes()).hexdigest()
     status = "ok" if actual == expected else "CHANGED UPSTREAM"
     print("  {:<8} {:<40} {}".format(period, dest.name, status))
