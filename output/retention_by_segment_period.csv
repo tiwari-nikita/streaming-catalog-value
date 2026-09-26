@@ -1,0 +1,16 @@
+from,segment,titles,hours_kept_pct,dropped_pct
+2023H2,Licensed,11026,86.191,20.533
+2023H2,Catalog original,4582,82.076,5.347
+2023H2,New original,386,30.634,3.109
+2024H1,Licensed,11092,81.645,23.323
+2024H1,Catalog original,4739,77.336,12.302
+2024H1,New original,329,26.813,5.775
+2024H2,Licensed,10579,75.887,21.363
+2024H2,Catalog original,4598,87.318,3.697
+2024H2,New original,384,31.965,5.469
+2025H1,Licensed,10708,76.914,22.693
+2025H1,Catalog original,4967,82.184,4.047
+2025H1,New original,502,30.994,26.295
+2025H2,Licensed,10753,78.92,20.859
+2025H2,Catalog original,5230,79.593,4.971
+2025H2,New original,484,26.5,17.769

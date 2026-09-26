@@ -1,0 +1,4 @@
+model,r2_log,median_abs_pct_error,within_25pct,test_titles,train_titles
+Gradient boosting (median loss),0.8183,24.736,50.2738,13878,39495
+Naive: segment-specific retention,0.7712,26.1589,47.6077,13878,39495
+Naive: flat retention,0.7495,27.2152,46.9304,13878,39495
