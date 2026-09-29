@@ -3,6 +3,7 @@
 **What is a title actually worth to a streaming catalog?** An analysis of every title in Netflix's public engagement reports, H2 2023 – H1 2026: 97,736 title-period observations covering 28,694 titles.
 
 ```bash
+pip install -r requirements.txt
 python verify.py
 ```
 
@@ -59,3 +60,7 @@ Python 3.10+, `pandas`, `numpy`, `scikit-learn`, `matplotlib`, `openpyxl`, `pyar
 - Hours aren't revenue. There are no license fees or budgets, so titles are valued in viewing, not dollars.
 - The original/licensed split is a proxy.
 - Six half-years is a short panel, and Netflix moves to annual reports from 2027.
+
+## License
+
+Code is released under the MIT License (see [LICENSE](LICENSE)). The data belongs to its original publishers and keeps its original license; see the sources above.
