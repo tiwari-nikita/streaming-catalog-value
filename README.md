@@ -1,5 +1,15 @@
 # Streaming Catalog Value
 
+> **In plain English.** Twice a year, Netflix publishes how many hours people spent watching every title on the service. I combined all seven reports (almost 29,000 titles, late 2023 to mid 2026) to ask what a single show or film is really worth to a streaming service.
+>
+> - About half of all viewing is of titles Netflix licenses from other studios, not its own originals.
+> - New originals fade fast: in the half-year after launch, their daily viewing drops by more than 90%.
+> - Older titles hold on, keeping around 80% of their viewing from one half-year to the next.
+> - Fewer than 5% of titles account for half of everything watched.
+> - Next half-year's viewing of a title can be predicted with a typical error of about 25%, which beats two simple rules of thumb.
+>
+> Every number here is checked by an automated test, and one command downloads Netflix's reports and rebuilds it all. The technical version follows.
+
 **What is a title actually worth to a streaming catalog?** An analysis of every title in Netflix's public engagement reports, H2 2023 – H1 2026: 97,736 title-period observations covering 28,694 titles.
 
 ```bash
